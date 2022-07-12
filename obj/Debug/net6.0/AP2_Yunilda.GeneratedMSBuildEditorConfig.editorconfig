@@ -8,61 +8,61 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = AP2_Yunilda
 build_property.RootNamespace = AP2_Yunilda
-build_property.ProjectDir = C:\Aplicada 1\AP2_Yunilda\
+build_property.ProjectDir = C:\Users\usario\Desktop\The Beavers\Ap1_P2Yunilda\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Aplicada 1\AP2_Yunilda
+build_property.MSBuildProjectDirectory = C:\Users\usario\Desktop\The Beavers\Ap1_P2Yunilda
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Aplicada 1/AP2_Yunilda/App.razor]
+[C:/Users/usario/Desktop/The Beavers/Ap1_P2Yunilda/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Aplicada 1/AP2_Yunilda/Pages/Consultas/C_Verduras.razor]
+[C:/Users/usario/Desktop/The Beavers/Ap1_P2Yunilda/Pages/Consultas/C_Verduras.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENfVmVyZHVyYXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Aplicada 1/AP2_Yunilda/Pages/Consultas/C_Vitaminas.razor]
+[C:/Users/usario/Desktop/The Beavers/Ap1_P2Yunilda/Pages/Consultas/C_Vitaminas.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXENfVml0YW1pbmFzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Aplicada 1/AP2_Yunilda/Pages/Counter.razor]
+[C:/Users/usario/Desktop/The Beavers/Ap1_P2Yunilda/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Aplicada 1/AP2_Yunilda/Pages/Index.razor]
+[C:/Users/usario/Desktop/The Beavers/Ap1_P2Yunilda/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Aplicada 1/AP2_Yunilda/Pages/Registro/R_Verduras.razor]
+[C:/Users/usario/Desktop/The Beavers/Ap1_P2Yunilda/Pages/Registro/R_Verduras.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0cm9cUl9WZXJkdXJhcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Aplicada 1/AP2_Yunilda/Shared/SurveyPrompt.razor]
+[C:/Users/usario/Desktop/The Beavers/Ap1_P2Yunilda/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Aplicada 1/AP2_Yunilda/_Imports.razor]
+[C:/Users/usario/Desktop/The Beavers/Ap1_P2Yunilda/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Aplicada 1/AP2_Yunilda/Shared/MainLayout.razor]
+[C:/Users/usario/Desktop/The Beavers/Ap1_P2Yunilda/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-55yvuhc4qm
 
-[C:/Aplicada 1/AP2_Yunilda/Shared/NavMenu.razor]
+[C:/Users/usario/Desktop/The Beavers/Ap1_P2Yunilda/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-qavu07wsxn
 
-[C:/Aplicada 1/AP2_Yunilda/Pages/Error.cshtml]
+[C:/Users/usario/Desktop/The Beavers/Ap1_P2Yunilda/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Aplicada 1/AP2_Yunilda/Pages/_Host.cshtml]
+[C:/Users/usario/Desktop/The Beavers/Ap1_P2Yunilda/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Aplicada 1/AP2_Yunilda/Pages/_Layout.cshtml]
+[C:/Users/usario/Desktop/The Beavers/Ap1_P2Yunilda/Pages/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0xheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

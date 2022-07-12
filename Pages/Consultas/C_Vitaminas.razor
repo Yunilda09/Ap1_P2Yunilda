@@ -5,6 +5,7 @@
 
 <EditForm Model="this">
     <div class="card border-info mb-3" style="max-width: 100rem;">
+
         <div class="card">
 
             <div class="card-header">
@@ -12,40 +13,43 @@
                 <h2>Consulta de Vitaminas</h2>
             </div>
         </div>
-         <div class="col-3">
-                <button @onclick="Buscar" class="btn btn-outline-primary input-group-text mt-4" >
-                    <i class="oi oi-magnifying-glass"/>Buscar</button>
-            </div>
+        <div class="col-3">
+            <button @onclick="Buscar" class="btn btn-outline-primary input-group-text mt-4">
+                <i class="oi oi-magnifying-glass" />Buscar</button>
         </div>
-       
-   
-     <table class="table table-striped table-hover mt-4" style="cursor: pointer;">
 
-        <thead class="thead">
-            <tr class="table">
-                <th>VitaminaId</th>
-                <th>Descripcion</th>
-                <th>Unidad de Medida</th>
-            </tr>
-        </thead>
 
-        <tbody>
 
-            @foreach (var vitamina in vitaminas)
-            {
-                <tr>
-                    <td>@vitamina.VitaminaId</td>
-                    <td>@vitamina.Descripcion</td>
-                    <td>@vitamina.UnidadMedida</td>
-                 
+        <table class="table table-striped table-hover mt-4" style="cursor: pointer;">
+
+            <thead class="thead">
+                <tr class="table">
+                    <th>VitaminaId</th>
+                    <th>Descripcion</th>
+                    <th>Existencia</th>
+                    <th>Unidad de Medida</th>
                 </tr>
-            }
+            </thead>
 
-        </tbody>
+            <tbody>
 
-    </table>
+                @foreach (var vitamina in vitaminas)
+                {
+                    <tr>
+                        <td>@vitamina.VitaminaId</td>
+                        <td>@vitamina.Descripcion</td>
+                        <td>@vitamina.Existencia</td>
+                        <td>@vitamina.UnidadMedida</td>
+
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+    </div>
 </EditForm>
-@code  {
+@code {
     public List<Vitaminas> vitaminas { get; set; } = new List<Vitaminas>();
 
     void Buscar()

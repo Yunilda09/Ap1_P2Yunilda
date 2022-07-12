@@ -14,6 +14,7 @@ builder.Services.AddDbContext<Contexto>( options =>
 
 builder.Services.AddScoped<VerdurasBLL>();
 builder.Services.AddScoped<VitaminasBLL>();
+builder.Services.AddScoped<NotificationService>();
 
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();

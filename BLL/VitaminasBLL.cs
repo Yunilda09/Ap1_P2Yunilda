@@ -22,20 +22,20 @@ namespace AP2_Yunilda.BLL
         }
         public string GetDescripcion(int vitamina)
         {
-            var vit = _contexto.Vitaminas
+            var vitamin = _contexto.Vitaminas
                 .Where(v => v.VitaminaId == vitamina)   
                 .AsNoTracking()   
                 .SingleOrDefault();
-                 return vit.Descripcion;
+                 return vitamin.Descripcion;
         }
 
         public string GetUnidadMedida(int vitamina)
         {
-            var vit = _contexto.Vitaminas
+            var vitamin = _contexto.Vitaminas
                 .Where(v => v.VitaminaId == vitamina)
                 .AsNoTracking()
                 .SingleOrDefault();
-                 return vit.UnidadMedida;
+                 return vitamin.UnidadMedida;
         }
         public List<Vitaminas> GetList()
         {

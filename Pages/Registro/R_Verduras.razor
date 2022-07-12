@@ -1,10 +1,11 @@
 @page "/Verdura"
-@*page "/Verdura //{VerduraId:int}"*@
+@page "/Verdura/{VerduraId:int}"
 
 @inject VerdurasBLL verdurasBLL
 @inject VitaminasBLL vitaminasBLL
+@inject NotificationService notificationService
 
-<EditForm Model="verdura" OnvalidSubmit ="Guardar">
+<EditForm Model="verdura" OnValidSubmit="Guardar">
     <DataAnnotationsValidator />
 
     <div class="card border-info mb-3" style="max-width: 100rem;">
@@ -17,57 +18,63 @@
 
                 <div class="row justify-content-between">
                     <div class="col-3">
-                    <label>VerduraId</label>
-                    <div class="input-group mb-3">
-                          <InputNumber class="form-control" @bind-Value="verdura.VerduraId" />
-                        <button class="btn btn-outline-primary" type="button" @onclick="Buscar"> <i class="oi oi-magnifying-glass" /> </button>
-                    
+                        <label>VerduraId</label>
+                        <div class="input-group mb-3">
+                            <InputNumber class="form-control" @bind-Value="verdura.VerduraId" />
+                            <button class="btn btn-outline-primary" type="button" @onclick="Buscar"> <i
+                                    class="oi oi-magnifying-glass" /> </button>
+
+                        </div>
+                    </div>
+
+                    <div class="col-3">
+                        <label>Fecha de Creacion</label>
+                        <input type="date" class="form-control" @bind-value="verdura.FechaCreacion"
+                            aria-label="Recipient's username" aria-describedby="basic-addon2">
                     </div>
                 </div>
 
-                <div class="col-3">
-                    <label>Fecha de Creacion</label>
-                    <input type="date" class="form-control" @bind-value="verdura.FechaCreacion"  aria-label="Recipient's username" aria-describedby="basic-addon2">
+                @*Nombre de la verdura*@
+                <label>Nombre de la Verdura</label>
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" @bind-value="verdura.Nombre"
+                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
                 </div>
             </div>
-
-        @*Nombre de la verdura*@
-        <label>Nombre de la Verdura</label>
-        <div class="input-group input-group-lg">
-        <input type="text" class="form-control" @bind-value="verdura.Nombre" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-        </div>
-        </div>
-        @* DETALLE *@
+            @* DETALLE *@
             <fieldset class="border-success">
                 <div class="card-body">
-                <div class="row">
-                    
-                @* Vitamina Id *@
-                <div class="col-2">
-                    <label>Vitaminas</label>
-                    <div class="btn-group me-2" role="group" aria-label="Second group">
-                       <select class="form-select" @bind="Detalle.VitaminaId" aria-label=".form-select-lg example">
-                        <option selected>Seleccione</option>
-                        @foreach( var vitamina in VitaminaList)
-                        {
-                            <option value="@vitamina.VitaminaId"> @vitamina.Descripcion</option> 
-                        }
-                       </select>
+                    <div class="row">
+
+                        @* Vitamina Id *@
+                        <div class="col-2">
+                            <label>Vitaminas</label>
+                            <div class="btn-group me-2" role="group" aria-label="Second group">
+                                <select class="form-select" @bind="Detalle.VitaminaId"
+                                    aria-label=".form-select-lg example">
+                                    <option selected>Seleccione</option>
+                                    @foreach (var vitamina in VitaminaList)
+                                    {
+                                        <option value="@vitamina.VitaminaId"> @vitamina.Descripcion</option>
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        @* Cantidad *@
+                        <div class="col-2">
+                            <label>Cantidad</label>
+                            <input type="number" class="form-control" @bind-value="Detalle.Cantidad"
+                                aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        </div>
+                        @*Boton de agregar detalle*@
+                        <div class="col-2">
+                            <button type="button" class="btn btn-outline-primary input-group-text mt-4"
+                                @onclick="AgregarDetalle">
+                                <span class="oi oi-plus"></span>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                </div>
-                @* Cantidad *@
-                <div class="col-2">
-                    <label>Cantidad</label>  
-                    <input type="number" class="form-control" @bind-value="Detalle.Cantidad" aria-label="Recipient's username" aria-describedby="basic-addon2"> 
-                </div>
-               @*Boton de agregar detalle*@
-                <div class="col-2">
-                    <button type="button" class="btn btn-outline-primary input-group-text mt-4" @onclick="AgregarDetalle">
-                        <span class="oi oi-plus"></span>
-                    </button>
-                </div>
-                </div>
-               </div>
             </fieldset>
 
 
@@ -77,8 +84,8 @@
                 <thead class="thead">
                     <tr class="table">
                         <th>VitaminaId</th>
-                        <th>Cantidad</th> 
                         <th>Descripcion</th>
+                        <th>Cantidad</th>
                         <th>Unidad de medida</th>
                     </tr>
                 </thead>
@@ -90,26 +97,30 @@
                             <td>@vitaminasBLL.GetDescripcion(item.VitaminaId)</td>
                             <td>@item.Cantidad</td>
                             <td>@vitaminasBLL.GetUnidadMedida( item.VitaminaId)</td>
+                            <td><span class="btn btn-sm btn-outline-primary oi oi-ban" hrf="#"
+                                @onclick="@(() => RemoverFila(item))"></span></td>
                         </tr>
                     }
                 </tbody>
             </table>
             <hr />
             @*Observaciones*@
-        <div class="form-floating">
-        <textarea type="text" class="form-control" @bind="verdura.Observaciones" placeholder="Leave a comment here" 
-        id="floatingTextarea2" style="height: 100px"></textarea>
-        <label for="floatingTextarea2">Observaciones</label>
-        </div> 
-        <div class="card-footer d-flex justify-content-center">
-            <div class="btn-group" role="group">
-                <button type="button" class="btn btn-outline-primary" @onclick="Nuevo" > <i class="oi oi-file" /> Nuevo</button>
-                <button type="submit" class="btn btn-outline-success"> <i class="oi oi-document" /> Guardar</button>
-                <button type="button" class="btn btn-outline-danger"  @onclick="Eliminar"><i class="oi oi-trash" /> Eliminar</button>
+            <div class="form-floating">
+                <textarea type="text" class="form-control" @bind="verdura.Observaciones"
+                    placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2">Observaciones</label>
+            </div>
+            <div class="card-footer d-flex justify-content-center">
+                <div class="d-grid gap-2 d-md-block">
+                    <button type="button" class="btn btn-outline-primary" @onclick="Nuevo"> <i class="oi oi-file" />
+                        Nuevo</button>
+                    <button type="submit" class="btn btn-outline-success"> <i class="oi oi-document" /> Guardar</button>
+                    <button type="button" class="btn btn-outline-danger" @onclick="Eliminar"><i class="oi oi-trash" />
+                        Eliminar</button>
+                </div>
             </div>
         </div>
-        </div>
-        </div>
+    </div>
 </EditForm>
 @code
 {
@@ -122,73 +133,79 @@
 
     public List<Vitaminas> VitaminaList { get; set; } = new List<Vitaminas>();
 
-        protected override void OnInitialized()
-        {
-            VitaminaList = vitaminasBLL.GetList();
-            verdura.VerduraId = 0;
-            verdura.FechaCreacion = DateTime.Now;
+    protected override void OnInitialized()
+    {
+        VitaminaList = vitaminasBLL.GetList();
+        verdura.VerduraId = 0;
+        verdura.FechaCreacion = DateTime.Now;
 
-            if (VerduraId > 0)
-            {
-                verdura.VerduraId = VerduraId;
-                Buscar();
-            }
+        if (VerduraId > 0)
+        {
+            verdura.VerduraId = VerduraId;
+            Buscar();
         }
+    }
 
-        void Buscar()
+    void Buscar()
+    {
+        var encontrado = verdurasBLL.Buscar(verdura.VerduraId);
+        if (encontrado != null)
+            verdura = encontrado;
+    }
+    void Nuevo()
+    {
+        this.verdura = new Verduras();
+
+    }
+    void Guardar()
+    {
+        if (verdurasBLL.Guardar(this.verdura))
         {
-            var encontrado = verdurasBLL.Buscar(verdura.VerduraId);
-            if (encontrado != null)
-                verdura = encontrado;
-        }
-         void Nuevo()
-        {
-            this.verdura = new Verduras();
-        
-        }
-        void Guardar()
-        {
-           if  (verdurasBLL.Guardar(this.verdura)){
-             
-             //notificationService.Success("Registro guardado correctamente");
-            
+
+            //notificationService.Success("Registro guardado correctamente");
+
             ShowNotification(
-                new NotificationMessage
-                    {
-                        Severity = NotificationSeverity.Success,
-                        Summary = "Guardado correctamente"
-                    }
-                    );
-           }
-                     
-        } 
-           
-        
-        public void AgregarDetalle()
-        {
-            var vitamina = vitaminasBLL.Buscar(Detalle.VitaminaId);
-            this.verdura.Detalle.Add(this.Detalle);
-           this.Detalle = new VerdurasDetalle();
-        }
-   
-        void Eliminar()
-        {
-            if(verdurasBLL.Eliminar(this.verdura)){
-                ShowNotification(
-                new NotificationMessage
-                    {
-                        Severity = NotificationSeverity.Success,
-                        Summary = "Elimino correctamente"
-                    });
-            }
-            else
+            new NotificationMessage
             {
-
+                Severity = NotificationSeverity.Success,
+                Summary = "Guardado correctamente"
             }
+            );
         }
-        void ShowNotification(NotificationMessage message)
+
+    }
+
+
+    public void AgregarDetalle()
+    {
+        var vitamina = vitaminasBLL.Buscar(Detalle.VitaminaId);
+        this.verdura.Detalle.Add(this.Detalle);
+        this.Detalle = new VerdurasDetalle();
+    }
+
+    void Eliminar()
+    {
+        if (verdurasBLL.Eliminar(this.verdura))
         {
-           // notificationService.Notify(message);
+            ShowNotification(
+            new NotificationMessage
+            {
+                Severity = NotificationSeverity.Success,
+                Summary = "Elimino correctamente"
+            });
+        }
+        else
+        {
 
         }
+    }
+    void ShowNotification(NotificationMessage message)
+    {
+        notificationService.Notify(message);
+
+    }
+    void RemoverFila(VerdurasDetalle vitamina)
+    {
+        verdura.Detalle.Remove(vitamina);
+    }
 }

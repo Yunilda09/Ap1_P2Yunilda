@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xoqppp9Yo8yEiRz42lxSXl2ulxNW8E4/Be3/s1GINL7ympUEY+MJ8jkaGEGPWXUys/Uk/n4E0xrfd7sJ5+Ehsg==",
+  "dgSpecHash": "uG9k22xdxXgCuQhzM+DsJ6gGmhiaVR5S5nxQrQRR5CW4pwhfWLuWlEBGdEbYLoRFeuIQzgtkTvFVSkUadToV3w==",
   "success": true,
-  "projectFilePath": "C:\\Aplicada 1\\AP2_Yunilda\\AP2_Yunilda.csproj",
+  "projectFilePath": "C:\\Users\\usario\\Desktop\\The Beavers\\Ap1_P2Yunilda\\AP2_Yunilda.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\usario\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\usario\\.nuget\\packages\\libsassbuilder\\2.0.1\\libsassbuilder.2.0.1.nupkg.sha512",
@@ -33,7 +33,7 @@
     "C:\\Users\\usario\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\usario\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\usario\\.nuget\\packages\\microsoft.jsinterop\\5.0.0\\microsoft.jsinterop.5.0.0.nupkg.sha512",
-    "C:\\Users\\usario\\.nuget\\packages\\radzen.blazor\\3.19.3\\radzen.blazor.3.19.3.nupkg.sha512",
+    "C:\\Users\\usario\\.nuget\\packages\\radzen.blazor\\3.19.4\\radzen.blazor.3.19.4.nupkg.sha512",
     "C:\\Users\\usario\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlite3\\2.0.6\\sqlitepclraw.bundle_e_sqlite3.2.0.6.nupkg.sha512",
     "C:\\Users\\usario\\.nuget\\packages\\sqlitepclraw.core\\2.0.6\\sqlitepclraw.core.2.0.6.nupkg.sha512",
     "C:\\Users\\usario\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.6\\sqlitepclraw.lib.e_sqlite3.2.0.6.nupkg.sha512",

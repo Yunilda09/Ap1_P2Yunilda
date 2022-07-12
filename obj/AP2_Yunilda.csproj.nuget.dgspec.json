@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Aplicada 1\\AP2_Yunilda\\AP2_Yunilda.csproj": {}
+    "C:\\Users\\usario\\Desktop\\The Beavers\\Ap1_P2Yunilda\\AP2_Yunilda.csproj": {}
   },
   "projects": {
-    "C:\\Aplicada 1\\AP2_Yunilda\\AP2_Yunilda.csproj": {
+    "C:\\Users\\usario\\Desktop\\The Beavers\\Ap1_P2Yunilda\\AP2_Yunilda.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Aplicada 1\\AP2_Yunilda\\AP2_Yunilda.csproj",
+        "projectUniqueName": "C:\\Users\\usario\\Desktop\\The Beavers\\Ap1_P2Yunilda\\AP2_Yunilda.csproj",
         "projectName": "AP2_Yunilda",
-        "projectPath": "C:\\Aplicada 1\\AP2_Yunilda\\AP2_Yunilda.csproj",
+        "projectPath": "C:\\Users\\usario\\Desktop\\The Beavers\\Ap1_P2Yunilda\\AP2_Yunilda.csproj",
         "packagesPath": "C:\\Users\\usario\\.nuget\\packages\\",
-        "outputPath": "C:\\Aplicada 1\\AP2_Yunilda\\obj\\",
+        "outputPath": "C:\\Users\\usario\\Desktop\\The Beavers\\Ap1_P2Yunilda\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\usario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -52,7 +52,7 @@
             },
             "Radzen.Blazor": {
               "target": "Package",
-              "version": "[3.19.3, )"
+              "version": "[3.19.4, )"
             }
           },
           "imports": [
