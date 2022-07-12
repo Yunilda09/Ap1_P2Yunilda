@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AP2_Yunilda.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20220711191420_Inicial")]
-    partial class Inicial
+    [Migration("20220711223136_Modificando BLL")]
+    partial class ModificandoBLL
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -73,8 +73,12 @@ namespace AP2_Yunilda.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<double>("UnidadDeMedidas")
+                    b.Property<double>("Existencia")
                         .HasColumnType("REAL");
+
+                    b.Property<string>("UnidadMedida")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
 
                     b.HasKey("VitaminaId");
 
@@ -84,62 +88,72 @@ namespace AP2_Yunilda.Migrations
                         new
                         {
                             VitaminaId = 1,
-                            Descripcion = "Vitamina A (mg)",
-                            UnidadDeMedidas = 1.0
+                            Descripcion = "Vitamina A ",
+                            Existencia = 0.0,
+                            UnidadMedida = "mg"
                         },
                         new
                         {
                             VitaminaId = 2,
-                            Descripcion = "Vitamina B1 (mg)",
-                            UnidadDeMedidas = 1.5
+                            Descripcion = "Vitamina B1 ",
+                            Existencia = 0.0,
+                            UnidadMedida = "mg"
                         },
                         new
                         {
                             VitaminaId = 3,
-                            Descripcion = "Vitamina B2 (mg)",
-                            UnidadDeMedidas = 1.7
+                            Descripcion = "Vitamina B2 ",
+                            Existencia = 0.0,
+                            UnidadMedida = "mg"
                         },
                         new
                         {
                             VitaminaId = 4,
-                            Descripcion = "Vitamina B6 (mg)",
-                            UnidadDeMedidas = 2.0
+                            Descripcion = "Vitamina B6 ",
+                            Existencia = 0.0,
+                            UnidadMedida = "mg"
                         },
                         new
                         {
                             VitaminaId = 5,
-                            Descripcion = "Vitamina B12 (mcg)",
-                            UnidadDeMedidas = 2.3999999999999999
+                            Descripcion = "Vitamina B12 ",
+                            Existencia = 0.0,
+                            UnidadMedida = "mg"
                         },
                         new
                         {
                             VitaminaId = 6,
-                            Descripcion = "Vitamina C (mg)",
-                            UnidadDeMedidas = 500.0
+                            Descripcion = "Vitamina C",
+                            Existencia = 0.0,
+                            UnidadMedida = "mg"
                         },
                         new
                         {
                             VitaminaId = 7,
-                            Descripcion = "Vitamina D (mg)",
-                            UnidadDeMedidas = 5.0
+                            Descripcion = "Vitamina D ",
+                            Existencia = 0.0,
+                            UnidadMedida = "mg"
                         },
                         new
                         {
                             VitaminaId = 8,
-                            Descripcion = "Vitamina E (mg)",
-                            UnidadDeMedidas = 670.0
+                            Descripcion = "Vitamina E ",
+                            Existencia = 0.0,
+                            UnidadMedida = "mg"
                         },
                         new
                         {
                             VitaminaId = 9,
-                            Descripcion = "Vitamina K (mcg)",
-                            UnidadDeMedidas = -30.0
+                            Descripcion = "Vitamina K ",
+                            Existencia = 0.0,
+                            UnidadMedida = "mg"
                         },
                         new
                         {
                             VitaminaId = 10,
-                            Descripcion = "Vitamina B3 (mg)",
-                            UnidadDeMedidas = -2.0
+                            Descripcion = "Vitamina B3 ",
+                            Existencia = 0.0,
+                            UnidadMedida = "mg"
                         });
                 });
 

@@ -7,7 +7,7 @@ namespace AP2_Yunilda.Models
         [Key]
         public int Id { get; set; }
         public int VerduraId { get; set; }
-        public int VitaminasId { get; set; }
+        public int VitaminaId { get; set; }
 
          [Required(ErrorMessage = "Es Obligatorio.")]
         public double Cantidad { get; set; }

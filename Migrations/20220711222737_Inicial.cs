@@ -31,7 +31,8 @@ namespace AP2_Yunilda.Migrations
                     VitaminaId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Descripcion = table.Column<string>(type: "TEXT", nullable: false),
-                    UnidadDeMedidas = table.Column<double>(type: "REAL", nullable: false)
+                    UnidadMedida = table.Column<string>(type: "TEXT", nullable: false),
+                    Existencia = table.Column<double>(type: "REAL", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -61,53 +62,53 @@ namespace AP2_Yunilda.Migrations
 
             migrationBuilder.InsertData(
                 table: "Vitaminas",
-                columns: new[] { "VitaminaId", "Descripcion", "UnidadDeMedidas" },
-                values: new object[] { 1, "Vitamina A (mg)", 1.0 });
+                columns: new[] { "VitaminaId", "Descripcion", "Existencia", "UnidadMedida" },
+                values: new object[] { 1, "Vitamina A ", 0.0, "mg" });
 
             migrationBuilder.InsertData(
                 table: "Vitaminas",
-                columns: new[] { "VitaminaId", "Descripcion", "UnidadDeMedidas" },
-                values: new object[] { 2, "Vitamina B1 (mg)", 1.5 });
+                columns: new[] { "VitaminaId", "Descripcion", "Existencia", "UnidadMedida" },
+                values: new object[] { 2, "Vitamina B1 ", 0.0, "mg" });
 
             migrationBuilder.InsertData(
                 table: "Vitaminas",
-                columns: new[] { "VitaminaId", "Descripcion", "UnidadDeMedidas" },
-                values: new object[] { 3, "Vitamina B2 (mg)", 1.7 });
+                columns: new[] { "VitaminaId", "Descripcion", "Existencia", "UnidadMedida" },
+                values: new object[] { 3, "Vitamina B2 ", 0.0, "mg" });
 
             migrationBuilder.InsertData(
                 table: "Vitaminas",
-                columns: new[] { "VitaminaId", "Descripcion", "UnidadDeMedidas" },
-                values: new object[] { 4, "Vitamina B6 (mg)", 2.0 });
+                columns: new[] { "VitaminaId", "Descripcion", "Existencia", "UnidadMedida" },
+                values: new object[] { 4, "Vitamina B6 ", 0.0, "mg" });
 
             migrationBuilder.InsertData(
                 table: "Vitaminas",
-                columns: new[] { "VitaminaId", "Descripcion", "UnidadDeMedidas" },
-                values: new object[] { 5, "Vitamina B12 (mcg)", 2.3999999999999999 });
+                columns: new[] { "VitaminaId", "Descripcion", "Existencia", "UnidadMedida" },
+                values: new object[] { 5, "Vitamina B12 ", 0.0, "mg" });
 
             migrationBuilder.InsertData(
                 table: "Vitaminas",
-                columns: new[] { "VitaminaId", "Descripcion", "UnidadDeMedidas" },
-                values: new object[] { 6, "Vitamina C (mg)", 500.0 });
+                columns: new[] { "VitaminaId", "Descripcion", "Existencia", "UnidadMedida" },
+                values: new object[] { 6, "Vitamina C", 0.0, "mg" });
 
             migrationBuilder.InsertData(
                 table: "Vitaminas",
-                columns: new[] { "VitaminaId", "Descripcion", "UnidadDeMedidas" },
-                values: new object[] { 7, "Vitamina D (mg)", 5.0 });
+                columns: new[] { "VitaminaId", "Descripcion", "Existencia", "UnidadMedida" },
+                values: new object[] { 7, "Vitamina D ", 0.0, "mg" });
 
             migrationBuilder.InsertData(
                 table: "Vitaminas",
-                columns: new[] { "VitaminaId", "Descripcion", "UnidadDeMedidas" },
-                values: new object[] { 8, "Vitamina E (mg)", 670.0 });
+                columns: new[] { "VitaminaId", "Descripcion", "Existencia", "UnidadMedida" },
+                values: new object[] { 8, "Vitamina E ", 0.0, "mg" });
 
             migrationBuilder.InsertData(
                 table: "Vitaminas",
-                columns: new[] { "VitaminaId", "Descripcion", "UnidadDeMedidas" },
-                values: new object[] { 9, "Vitamina K (mcg)", -30.0 });
+                columns: new[] { "VitaminaId", "Descripcion", "Existencia", "UnidadMedida" },
+                values: new object[] { 9, "Vitamina K ", 0.0, "mg" });
 
             migrationBuilder.InsertData(
                 table: "Vitaminas",
-                columns: new[] { "VitaminaId", "Descripcion", "UnidadDeMedidas" },
-                values: new object[] { 10, "Vitamina B3 (mg)", -2.0 });
+                columns: new[] { "VitaminaId", "Descripcion", "Existencia", "UnidadMedida" },
+                values: new object[] { 10, "Vitamina B3 ", 0.0, "mg" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_VerdurasDetalle_VerduraId",

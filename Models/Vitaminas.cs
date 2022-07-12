@@ -13,7 +13,8 @@ namespace AP2_Yunilda.Models
         public string? Descripcion { get; set; }
 
         [Required(ErrorMessage = "Debe indicar la Unidad de medida.")]
-        public double UnidadDeMedidas { get; set; }
+        public string UnidadMedida { get; set; }
+        public double Existencia { get; set; }
 
         }
 }

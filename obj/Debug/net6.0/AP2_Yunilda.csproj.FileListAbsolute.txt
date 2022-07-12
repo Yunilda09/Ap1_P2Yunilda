@@ -53,3 +53,5 @@ C:\Aplicada 1\AP2_Yunilda\obj\Debug\net6.0\refint\AP2_Yunilda.dll
 C:\Aplicada 1\AP2_Yunilda\obj\Debug\net6.0\AP2_Yunilda.pdb
 C:\Aplicada 1\AP2_Yunilda\obj\Debug\net6.0\AP2_Yunilda.genruntimeconfig.cache
 C:\Aplicada 1\AP2_Yunilda\obj\Debug\net6.0\ref\AP2_Yunilda.dll
+C:\Aplicada 1\AP2_Yunilda\bin\Debug\net6.0\Radzen.Blazor.dll
+C:\Aplicada 1\AP2_Yunilda\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll

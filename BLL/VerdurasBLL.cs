@@ -34,8 +34,8 @@ namespace AP2_Yunilda.BLL
             //sumar el inventario nuevamente
             foreach (var item in verdura.Detalle)
             {
-                var vitamina = _contexto.Vitaminas.Find(item.VitaminasId);
-                vitamina.UnidadDeMedidas += item.Cantidad;
+                var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
+                vitamina.Existencia += item.Cantidad;
             }
          
             bool insertar = _contexto.SaveChanges() >0;
@@ -59,9 +59,9 @@ namespace AP2_Yunilda.BLL
             //restar el inventario del detalle anterior
             foreach (var item in anterior.Detalle)
             {
-                var vitamina = _contexto.Vitaminas.Find(item.VitaminasId);
+                var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
 
-                vitamina.UnidadDeMedidas -= item.Cantidad;
+                vitamina.Existencia -= item.Cantidad;
             }
 
             //borrar los items del detalle anterior
@@ -70,8 +70,8 @@ namespace AP2_Yunilda.BLL
             //sumar el inventario nuevamente
             foreach (var item in verdura.Detalle)
             {
-                var vitamina = _contexto.Vitaminas.Find(item.VitaminasId);
-                vitamina.UnidadDeMedidas += item.Cantidad;
+                var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
+                vitamina.Existencia += item.Cantidad;
 
                 _contexto.Entry(item).State = EntityState.Added;
             }
@@ -88,8 +88,8 @@ namespace AP2_Yunilda.BLL
             //sumar el inventario nuevamente
             foreach (var item in verdura.Detalle)
             {
-                var vitamina = _contexto.Vitaminas.Find(item.VitaminasId);
-                vitamina.UnidadDeMedidas -= item.Cantidad;
+                var vitamina = _contexto.Vitaminas.Find(item.VitaminaId);
+                vitamina.Existencia -= item.Cantidad;
 
             }
                 _contexto.Entry(verdura).State = EntityState.Deleted;
